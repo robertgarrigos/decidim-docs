@@ -84,7 +84,7 @@ git clone https://github.com/decidim/decidim
 cd decidim
 bundle install
 ```
-Remove the ```listen```` and ```spring-watcher-listen``` from ```Gemfile``` and ```decidim-generators/Gemfile```
+Remove the ```listen``` and ```spring-watcher-listen``` from ```Gemfile``` and ```decidim-generators/Gemfile```
 
 Apply this diff
 ```
