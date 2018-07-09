@@ -50,8 +50,7 @@ Or, if you don't want/need a background service you can just run:
 nginx
 ```
 
-
-
+Test nginx is runnig by pointing a browser to http://localhost:8080/
 
 ## postgresql install:
 
