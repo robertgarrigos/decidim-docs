@@ -53,6 +53,10 @@ nginx
 Test nginx is runnig by pointing a browser to http://localhost:8080/
 
 ## postgresql install:
+```
+brew install postgresql
+brew services start postgresql
+```
 
 ## imagemagick install:
 
