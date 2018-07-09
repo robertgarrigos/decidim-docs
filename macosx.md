@@ -11,18 +11,31 @@ brew install passenger
 ```
 brew install nginx --with-passenger
 ```
-if you already had ngnix
+if you already had nginx
 ```
 brew reinstall nginx --with-passenger
 ```
 
-conf files in /usr/local/etc/nginx/
+Docroot is: /usr/local/var/www
 
-run background service with
-```
+The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /usr/local/etc/nginx/servers/.
+
+To activate Phusion Passenger, add this to /usr/local/etc/nginx/nginx.conf, inside the 'http' context:
+  passenger_root /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
+  passenger_ruby /usr/bin/ruby;
+
+To have launchd start nginx now and restart at login:
+  ```
 brew services start nginx
 ```
-otherwise run just ```nginx``` to start the service
+Or, if you don't want/need a background service you can just run:
+```
+nginx
+```
+
 
 
 
