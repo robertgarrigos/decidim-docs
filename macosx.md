@@ -24,8 +24,22 @@ nginx can run without sudo.
 nginx will load all files in /usr/local/etc/nginx/servers/.
 
 To activate Phusion Passenger, add this to /usr/local/etc/nginx/nginx.conf, inside the 'http' context:
-  passenger_root /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
-  passenger_ruby /usr/bin/ruby;
+```
+passenger_root /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
+passenger_ruby /usr/bin/ruby;
+```
+So it end up like this:
+```
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    passenger_root /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
+    passenger_ruby /usr/bin/ruby;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+```
 
 To have launchd start nginx now and restart at login:
   ```
