@@ -1,8 +1,18 @@
 # Install decidim locally on a macosx
 
-Follow instructions to install Rails here: http://installrails.com
+Follow instructions to install Rails here: http://installrails.com. This will also install brew.
 
 ## nginx install:
+```
+brew install nginx
+```
+conf files in /usr/local/etc/nginx/
+
+run background service with
+```
+brew services start nginx
+```
+otherwise run just ```nginx``` to start the service
 
 ## Install Passenger:
 
