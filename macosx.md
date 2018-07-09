@@ -11,6 +11,11 @@ brew install passenger
 ```
 brew install nginx --with-passenger
 ```
+if you already had ngnix
+```
+brew reinstall nginx --with-passenger
+```
+
 conf files in /usr/local/etc/nginx/
 
 run background service with
