@@ -2,9 +2,14 @@
 
 Follow instructions to install Rails here: http://installrails.com. This will also install brew.
 
+## Install Passenger:
+```
+brew install passenger
+```
+
 ## nginx install:
 ```
-brew install nginx
+brew install nginx --with-passenger
 ```
 conf files in /usr/local/etc/nginx/
 
@@ -14,7 +19,7 @@ brew services start nginx
 ```
 otherwise run just ```nginx``` to start the service
 
-## Install Passenger:
+
 
 ## postgresql install:
 
